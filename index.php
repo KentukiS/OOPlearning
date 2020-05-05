@@ -2,7 +2,9 @@
 
 class Room
 {
-	public $color = 'red'; 
+	// public $color = 'red'; //выведет красный при исполнении инструкции $object->color;
+	private $color = 'red'; // не выведет цвет при сполнении инструкции $object->color 
+							// но при это вывыедет текст при использовании функций внутри обьекта
 
 	public function getColor()
 	{
@@ -16,4 +18,6 @@ class Room
 	}
 }
 
-?>
+$object = new Room();
+echo $object->getColor();
+echo $object->color;
