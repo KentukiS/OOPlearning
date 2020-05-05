@@ -19,3 +19,4 @@ class Room
 $object = new Room();
 $object->changeColor("green");
 $object->getColor();
+//test
