@@ -2,23 +2,26 @@
 
 class Room
 {
-	// public $color = 'red'; //выведет красный при исполнении инструкции $object->color;
-	private $color = 'red'; // не выведет цвет при сполнении инструкции $object->color 
-							// но при это вывыедет текст при использовании функций внутри обьекта
+	public static $location = "Inside of the house";
 
-	public function getColor()
+	public static function sayWelcome()
 	{
-		echo $this->color;
-	}
-
-	public function changeColor($color)
-	{
-		echo $this->color;
-		$this->color = $color ;
+		echo "Hi, i'm static";
 	}
 }
 
-$object = new Room();
-echo $object->getColor();
-echo $object->color;
-?>
+echo Room::$location;
+echo "<pre>";
+echo Room::sayWelcome();
+
+
+$myRoom = new Room();
+
+echo "<br>";
+echo "<br>";
+
+echo $myRoom::$location;
+
+echo "<br>";
+
+$myRoom::sayWelcome();
