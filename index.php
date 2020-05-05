@@ -21,3 +21,4 @@ class Room
 $object = new Room();
 echo $object->getColor();
 echo $object->color;
+?>
